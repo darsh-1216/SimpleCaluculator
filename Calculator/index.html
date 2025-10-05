@@ -8,33 +8,32 @@
 </head>
 <body>
     <div class="calculator">
-        <input type="text" id="result">
+        <input type="text" id="result" readonly value="0">
         <div class="buttons">
+            <button class="top-btn" onclick="clearResult()">AC</button>
+            <button class="top-btn" onclick="backspace()">⌫</button>
+            <button class="top-btn" onclick="appendValue('%')">%</button>
+            <button class="operator" onclick="appendValue('/')">÷</button>
+
             <button onclick="appendValue('7')">7</button>
             <button onclick="appendValue('8')">8</button>
             <button onclick="appendValue('9')">9</button>
-            <button class="operator" onclick="appendValue('/')">÷</button>
+            <button class="operator" onclick="appendValue('*')">×</button>
 
             <button onclick="appendValue('4')">4</button>
             <button onclick="appendValue('5')">5</button>
             <button onclick="appendValue('6')">6</button>
-            <button class="operator" onclick="appendValue('*')">×</button>
+            <button class="operator" onclick="appendValue('-')">−</button>
 
             <button onclick="appendValue('1')">1</button>
             <button onclick="appendValue('2')">2</button>
             <button onclick="appendValue('3')">3</button>
-            <button class="operator" onclick="appendValue('-')">−</button>
-
-            <button onclick="appendValue('0')">0</button>
-            <button onclick="appendValue('.')">.</button>
-            <button class="operator" onclick="calculate()">=</button>
             <button class="operator" onclick="appendValue('+')">+</button>
 
-            <!-- Backspace Button -->
-            <button style="grid-column: span 2; background:#607d8b;" onclick="backspace()">⌫</button>
-
-            <button style="grid-column: span 2; background:#f44336;"
-                onclick="clearResult()">C</button>
+            <button onclick="appendValue('00')">00</button>
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('.')">.</button>
+            <button class="equal" onclick="calculate()">=</button>
         </div>
     </div>
     <script src="script.js"></script>
